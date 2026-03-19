@@ -76,7 +76,6 @@ def run_agent(question: str) :
             print(f"\nFinal Answer: {ai_message.content}")
             return ai_message.content
 
-        # This is basically the tool call whihc the AI wants to invoke 
         tool_call = tool_calls[0]
         tool_name = tool_call.get("name")
         tool_args = tool_call.get("args")
